@@ -1,0 +1,73 @@
+/* import React, { useState } from 'react'
+import Logo from "../assets/Logo.png";
+import RightArrow from "../assets/icon/rightArrow.svg"
+import {
+  ArrowLeftRightIcon,
+  BarChart3Icon,
+  Clock4Icon,
+  LayoutDashboard,
+  HelpCircleIcon,
+} from "lucide-react";
+import { motion } from "framer-motion";
+
+
+const variants = {
+  // todo: change expanded to 30% and nonexpanded to %6
+  expanded: { width: "220px" },
+  nonexpanded: { width: "60px" },
+};
+
+const navLinks = [
+  {
+    link: "Dashboard",
+    icon: LayoutDashboard,
+  },
+  {
+    link: "Activity",
+    icon: Clock4Icon,
+  },
+  {
+    link: "Analytics",
+    icon: BarChart3Icon,
+  },
+  {
+    link: "Transactions",
+    icon: ArrowLeftRightIcon,
+  },
+  {
+    link: "Support",
+    icon: HelpCircleIcon,
+  },
+];
+function Navbar() {
+  const [isExpanded, setIsExpanded] = useState(true);
+  const [activeIndex, setActiveIndex] = useState(0);
+  return (
+    <motion.div  animate={isExpanded ? "expanded" : "nonexpanded"}
+    variants={variants} className='px-10 py-12 flex flex-col border border-r-1 w-1/5 h-screen relative'>
+
+    <div className='logo-div flex space-x-3 items-center'>
+        <img src={Logo}/>
+        <span>Money Tracker</span>
+    </div>
+    <div onClick={()=>setActiveIndex(!isExpanded)} className='w-5 h-5 bg-[#FF8C8C] rounded-full absolute -right-[10.5px] top-14 flex items-center justify-center'>
+      <img src={RightArrow} className='w-[5px]'/>
+
+    </div>
+    <div className="flex flex-col space-y-8 mt-12 ">
+      {navLinks.map((item,index)=>
+      <div key={index} className={'flex space-x-3 p-2 rounded'+(activeIndex===index?" bg-[#FF8C8C] text-white font-semibold":" ")}
+      onClick={()=>{
+        setActiveIndex(index)
+      }}
+      > 
+      <item.icon/>
+      <span>{item.link}</span>
+      </div>)}
+
+    </div>
+    </motion.div>
+  )
+}
+
+export default Navbar */
